@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>todo-list</title>
+</head>
+
+<body>
+  <h2>Projets</h2>
+  <ul id="projects">
+
+  </ul>
+
+  <h2>Nouveau projet</h2>
+  <form id="new-project">
+    <label for="name">Nom prjt</label>
+    <input type="text" name="name" id="name">
+
+    <button type="submit">Créer</button>
+
+  </form>
+
+  <h2>Taches</h2>
+  <ul id="tasks">
+
+  </ul>
+
+  <h2>Nouvelle Tache</h2>
+  <form id="new-task">
+    <label for="title">Nom tache</label>
+    <input type="text" name="title" id="title">
+
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description">
+
+    <label for="dueDate">date d'échéance</label>
+    <input type="date" name="dueDate" id="dueDate">
+
+    <label for="priority">Priorité</label>
+    <select name="priority" id="priority">
+      <option value="low">Basse</option>
+      <option value="medium">Moyenne</option>
+      <option value="high">Haute</option>
+
+    </select>
+    <button type="submit">Créer</button>
+
+  </form>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

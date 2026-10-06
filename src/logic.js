@@ -34,7 +34,7 @@ export function toggleDone(prjId, todoId) {
 export function updateTodo(todoId, prjId, updated) {
   proj = projects.find((p) => p.id === prjId);
   if (proj) {
-    const todo = proj.todos.find((t) => t.id === todoId);
+    const todo = proj.todos.find((t) => t.id == todoId);
     if (todo) {
       todo.title = updated.title;
       todo.description = updated.description;

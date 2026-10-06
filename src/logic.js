@@ -32,15 +32,11 @@ export function toggleDone(prjId, todoId) {
 }
 
 export function updateTodo(todoId, prjId, updated) {
-  proj = projects.find((p) => p.id === prjId);
+  const proj = projects.find((p) => p.id === prjId);
   if (proj) {
     const todo = proj.todos.find((t) => t.id === todoId);
     if (todo) {
-      todo.title = updated.title;
-      todo.description = updated.description;
-      todo.dueDate = updated.dueDate;
-      todo.priority = updated.priority;
-      todo.done = updated.done;
+      Object.assign(todo,updated)
     }
   }
 }
@@ -50,7 +46,7 @@ export function deleteTodo(prjId, todoId) {
   if (prj) {
     const todo = prj.todos.find((t) => t.id === todoId);
     if (todo) {
-      prj.todos.filter((t) => t.id !== todoId);
+     prj.todos = prj.todos.filter((t) => t.id !== todoId);
     }
   }
 }

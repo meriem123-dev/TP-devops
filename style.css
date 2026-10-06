@@ -1,0 +1,15 @@
+h2{
+    font-size: 32;
+    font-weight: bold;
+    color: rgb(67, 47, 21);
+}
+
+body{
+    margin : 5rem;
+    padding: 2rem;
+}
+
+form{
+    display: flex;
+    align-items: center;
+}

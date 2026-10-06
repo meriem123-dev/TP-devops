@@ -36,7 +36,7 @@ export function updateTodo(todoId, prjId, updated) {
   if (proj) {
     const todo = proj.todos.find((t) => t.id === todoId);
     if (todo) {
-      Object.assign(todo,update)
+      Object.assign(todo,updated)
     }
   }
 }

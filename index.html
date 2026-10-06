@@ -9,26 +9,42 @@
 </head>
 
 <body>
-  <h2>Projets</h2>
-  <ul id="projects">
+  <h1>To DO LIST</h1>
 
-  </ul>
+  <div class="prjts">
 
-  <h2>Nouveau projet</h2>
-  <form id="new-project">
-    <label for="name">Nom prjt</label>
-    <input type="text" name="name" id="name">
+    <div>
+      <h2>Projets</h2>
+      <ul id="projects">
 
-    <button type="submit">Créer</button>
+      </ul>
+    </div>
 
-  </form>
 
-  <h2>Taches</h2>
+    <div>
+      <h2>Nouveau projet</h2>
+      <form id="new-project">
+        <label for="name">Nom du projet</label>
+        <input type="text" name="name" id="name">
+
+        <button type="submit">Créer</button>
+
+      </form>
+    </div>
+
+  </div>
+
+  <div class="taches">
+
+    <div>
+          <h2>Taches</h2>
   <ul id="tasks">
-
   </ul>
+    </div>
+   
 
-  <h2>Nouvelle Tache</h2>
+    <div>
+         <h2>Nouvelle Tache</h2>
   <form id="new-task">
     <label for="title">Nom tache</label>
     <input type="text" name="title" id="title">
@@ -49,6 +65,35 @@
     <button type="submit">Créer</button>
 
   </form>
+
+  <form id="edit-task" hidden>
+    <label for="title">Nom tache</label>
+    <input name="title" required />
+
+    <label for="description">Description</label>
+    <input name="description" />
+
+    <label for="dueDate">Date d'échéance</label>
+    <input name="dueDate" type="date" />
+
+     <label for="priority">priorité</label>
+    <select name="priority">
+      <option value="low">low</option>
+      <option value="medium">medium</option>
+      <option value="high">high</option>
+    </select>
+
+    <button type="submit">Enregistrer</button>
+    <button type="button" id="cancel-edit">Annuler</button>
+  </form>
+
+    </div>
+ 
+  </div>
+
+
+  
+
   <script type="module" src="/src/main.js"></script>
 </body>
 
